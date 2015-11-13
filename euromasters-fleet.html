@@ -1,13 +1,41 @@
 <head>
-  <title>reactive-maps-example</title>
+  <title>Euromasters Fleet</title>
 </head>
 
 <body>
-  {{> map}}
+  {{>main}}
 </body>
 
-<template name="map">
-  <div class="map-container">
-    {{> googleMap name="map" options=mapOptions}}
+<template name="main">
+  <div class="wrapper">
+    <div class="logo">
+
+    </div>
+    <h1 class="header">Your Destination
+      <div>
+        <select id="destinationDropdown">
+          <option value="0">Hotel Secure</option>
+          <option value="1">Hoten Ibis</option>
+          <option value="2">Sporthalle</option>
+          <option value="3">Partyhalle</option>
+          <option value="4">Vallendar</option>
+          <option value="5">Enchilada Koblenz</option>
+        </select>
+      </div>
+    </h1>
+
+    <h2 class="header">Your Shuttle</h2>
+      <div>
+        <select id="shuttleDropdown">
+          <option value="218841">1</option>
+          <option value="218736">2</option>
+        </select>
+        <button style="text-align: center; margin-top: 15px; display: block; margin-left:auto; margin-right: auto" id="calculate" class="btn">Calculate</button>
+      </div>
+    <h3 class="header">Your Waiting Time</h3>
+      <div>
+        <output id="time" class="outputbox">
+        </output>
+      </div>
   </div>
 </template>
